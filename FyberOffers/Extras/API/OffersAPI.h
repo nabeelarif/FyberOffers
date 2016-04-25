@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "BaseAPI.h"
 #import "FyberCredentialModel.h"
+#import "OfferModel.h"
+
 @interface OffersAPI : BaseAPI
 -(void)loadNextPageOffersForCredentials:(FyberCredentialModel*)credential apiBlock:(APIBlock)block;
 @end

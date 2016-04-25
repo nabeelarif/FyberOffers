@@ -12,7 +12,7 @@ typedef void (^APIBlock) (BOOL success, NSArray* data);
 
 @interface BaseAPI : NSObject
 -(void)loadPaginatedDataForRequest:(NSURLRequest*)request apiBlock:(APIBlock)block;
--(void)parseResponse:(id) responseObject;
+-(id)parseResponse:(id) responseObject;
 -(void)handleError:(NSURLResponse *)response error:(NSError *)error;
 @property (nonatomic, readonly) NSInteger nextPage;
 @property (nonatomic, readonly) NSInteger prevPage;

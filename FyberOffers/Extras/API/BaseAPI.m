@@ -27,19 +27,28 @@
             [self handleError:response error:error];
             block(NO,nil);
         } else {
-            if ([self respondsToSelector:@selector(parseResponse:)]) {
-                [self parseResponse:responseObject];
+            
+            NSArray *offersArray = responseObject[@"offers"];
+            if (offersArray.count>0) {
+                _prevPage = _nextPage;
+                _nextPage = _nextPage+1;
             }
+            id result = nil;
+            if (offersArray && [self respondsToSelector:@selector(parseResponse:)]) {
+                 result = [self parseResponse:offersArray];
+            }
+            block(YES, result);
         }
     }];
     [dataTask resume];
 }
 +(void)showNeteworkErrorToast
 {
-    [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Network Error" description:@"Internet connection appears to be offline." type:TWMessageBarMessageTypeError];
+    [[TWMessageBarManager sharedInstance] showMessageWithTitle:NSLocalizedString(@"Network Error", @"Network error Title") description:NSLocalizedString(@"Internet connection appears to be offline.", @"Network Error message") type:TWMessageBarMessageTypeError];
 }
--(void)parseResponse:(id)responseObject{
+-(id)parseResponse:(id)responseObject{
     //should be implemented in child class
+    return nil;
 }
 -(void)resetValues{
     _prevPage = -1;

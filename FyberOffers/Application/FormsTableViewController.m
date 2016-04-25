@@ -8,11 +8,15 @@
 
 #import "FormsTableViewController.h"
 #import "Constants.h"
+#import "FyberCredentialModel.h"
+#import "OffersTableViewController.h"
+#import <TWMessageBarManager/TWMessageBarManager.h>
 
 @interface FormsTableViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *tfUID;
 @property (weak, nonatomic) IBOutlet UITextField *tfAPIKey;
 @property (weak, nonatomic) IBOutlet UITextField *tfAppId;
+@property (nonatomic, strong) FyberCredentialModel *currentCredential;
 - (IBAction)actionSearch:(id)sender;
 
 @end
@@ -40,5 +44,29 @@
 #pragma mark - Table view data source
 
 - (IBAction)actionSearch:(id)sender {
+    self.currentCredential.uid = self.tfUID.text;
+    self.currentCredential.apiKey = self.tfAPIKey.text;
+    self.currentCredential.appId = self.tfAppId.text;
+    
+    if (self.currentCredential.uid.length<=0) {
+        
+        [[TWMessageBarManager sharedInstance] showMessageWithTitle:NSLocalizedString(@"Error", @"Error Title") description:NSLocalizedString(@"Please provide UID.", @"Error Description") type:TWMessageBarMessageTypeError];
+    }else if(self.currentCredential.apiKey.length<=0){
+        
+        [[TWMessageBarManager sharedInstance] showMessageWithTitle:NSLocalizedString(@"Error", @"Error Title") description:NSLocalizedString(@"Please provide Api Key.", @"Error Description") type:TWMessageBarMessageTypeError];
+    }else if(self.currentCredential.appId.length<=0){
+        
+        [[TWMessageBarManager sharedInstance] showMessageWithTitle:NSLocalizedString(@"Error", @"Error Title") description:NSLocalizedString(@"Please provide App Id.", @"Error Description") type:TWMessageBarMessageTypeError];
+    }else{
+        [self performSegueWithIdentifier:@"offers" sender:self];
+    }
+    
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"offers"]) {
+        OffersTableViewController *offerVC = segue.destinationViewController;
+        offerVC.currentCredential = self.currentCredential;
+    }
 }
 @end

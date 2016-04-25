@@ -27,8 +27,14 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     [self loadPaginatedDataForRequest:request apiBlock:block];
 }
--(void)parseResponse:(id)responseObject{
-    
+-(id)parseResponse:(id)responseObject{
+    NSMutableArray<OfferModel*> *array = [NSMutableArray<OfferModel *> new];
+    for (NSDictionary *dictionary in responseObject) {
+        OfferModel *offer = [[OfferModel alloc] init];
+        [offer parseWithDictionary:dictionary];
+        [array addObject:offer];
+    }
+    return array;
 }
 -(void)setCredential:(FyberCredentialModel *)credential{
     if ([credential isEqual:credential]==NO) {
@@ -52,7 +58,7 @@
     [params setObject:@"de" forKey:@"locale"];
     [params setObject:[[[[UIDevice currentDevice] identifierForVendor] UUIDString] lowercaseString] forKey:@"device_id"];
     [params setObject:@"campaign2" forKey:@"pub0"];
-    [params setObject:@"1" forKey:@"page"];
+    [params setObject:[NSString stringWithFormat:@"%ld",self.nextPage] forKey:@"page"];
     [params setObject:[NSString stringWithFormat:@"%ld",(long)[[NSDate date] timeIntervalSince1970]] forKey:@"timestamp"];
     //NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
     [params setObject:@"9.3" forKey:@"os_version"];

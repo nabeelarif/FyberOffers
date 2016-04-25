@@ -10,10 +10,12 @@
 
 @interface OfferModel : NSObject
 @property (nonatomic, strong) NSString *title;
-@property (nonatomic) NSInteger *offer_id;
+@property (nonatomic) NSInteger offer_id;
 @property (nonatomic, strong) NSString *teaser;
 @property (nonatomic, strong) NSString *required_actions;
-@property (nonatomic) NSInteger *payout;
+@property (nonatomic) NSInteger payout;
 @property (nonatomic, strong) NSString *thumbnailLowres;
 @property (nonatomic, strong) NSString *thumbnailHires;
+
+-(void)parseWithDictionary:(NSDictionary *)dictionary;
 @end

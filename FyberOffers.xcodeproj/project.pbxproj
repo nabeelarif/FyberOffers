@@ -28,6 +28,7 @@
 		7DFBE6411CCEB1E400973EAA /* BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE63D1CCEB1E400973EAA /* BaseAPI.m */; };
 		7DFBE6421CCEB1E400973EAA /* OffersAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE63F1CCEB1E400973EAA /* OffersAPI.m */; };
 		7DFBE6451CCEB8C200973EAA /* FyberCredentialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE6441CCEB8C200973EAA /* FyberCredentialModel.m */; };
+		7DFBE6481CCEC0C800973EAA /* OffersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE6471CCEC0C800973EAA /* OffersTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		7DFBE63F1CCEB1E400973EAA /* OffersAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffersAPI.m; sourceTree = "<group>"; };
 		7DFBE6431CCEB8C200973EAA /* FyberCredentialModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FyberCredentialModel.h; sourceTree = "<group>"; };
 		7DFBE6441CCEB8C200973EAA /* FyberCredentialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FyberCredentialModel.m; sourceTree = "<group>"; };
+		7DFBE6461CCEC0C800973EAA /* OffersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffersTableViewController.h; sourceTree = "<group>"; };
+		7DFBE6471CCEC0C800973EAA /* OffersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffersTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +228,8 @@
 				7DFBE6301CCEA7E700973EAA /* Main.storyboard */,
 				7DFBE6321CCEA98500973EAA /* FormsTableViewController.h */,
 				7DFBE6331CCEA98500973EAA /* FormsTableViewController.m */,
+				7DFBE6461CCEC0C800973EAA /* OffersTableViewController.h */,
+				7DFBE6471CCEC0C800973EAA /* OffersTableViewController.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -447,6 +452,7 @@
 			files = (
 				7DFBE62A1CCE9F7A00973EAA /* Utility.m in Sources */,
 				7DFBE6221CCE9F6500973EAA /* UIColor+Theme.m in Sources */,
+				7DFBE6481CCEC0C800973EAA /* OffersTableViewController.m in Sources */,
 				7DFBE6231CCE9F6500973EAA /* UIFont+Theme.m in Sources */,
 				7DFBE6341CCEA98500973EAA /* FormsTableViewController.m in Sources */,
 				7DFBE6411CCEB1E400973EAA /* BaseAPI.m in Sources */,

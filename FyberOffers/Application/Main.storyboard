@@ -122,11 +122,40 @@
                         <outlet property="tfAPIKey" destination="SFE-fa-b2N" id="RRJ-OE-5O6"/>
                         <outlet property="tfAppId" destination="d3w-Ii-L5w" id="iAp-Dq-Ffo"/>
                         <outlet property="tfUID" destination="ZEk-Bx-Cvz" id="2oN-ax-aDF"/>
+                        <segue destination="UoB-oj-aeo" kind="show" identifier="offers" id="TKs-4O-5OS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWF-eK-YfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1252" y="753"/>
+        </scene>
+        <!--Offers Table View Controller-->
+        <scene sceneID="J3b-3B-Mh1">
+            <objects>
+                <tableViewController id="UoB-oj-aeo" customClass="OffersTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1I0-8j-mKR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Unn-QQ-nH1">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Unn-QQ-nH1" id="VVn-sD-DdC">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UoB-oj-aeo" id="Y9f-LE-die"/>
+                            <outlet property="delegate" destination="UoB-oj-aeo" id="uZo-fW-aTp"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZE-w8-c18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="753"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WqN-xI-T2c">
