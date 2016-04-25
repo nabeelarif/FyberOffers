@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DA682B574FBF689A8B9D5DF /* libPods-FyberOffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD9484E1A2149A892AB21FD /* libPods-FyberOffers.a */; };
 		7DFBE5E91CCE971E00973EAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE5E81CCE971E00973EAA /* main.m */; };
 		7DFBE5EC1CCE971E00973EAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE5EB1CCE971E00973EAA /* AppDelegate.m */; };
-		7DFBE5EF1CCE971E00973EAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE5EE1CCE971E00973EAA /* ViewController.m */; };
-		7DFBE5F21CCE971E00973EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBE5F01CCE971E00973EAA /* Main.storyboard */; };
 		7DFBE5F41CCE971E00973EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBE5F31CCE971E00973EAA /* Assets.xcassets */; };
 		7DFBE5F71CCE971E00973EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBE5F51CCE971E00973EAA /* LaunchScreen.storyboard */; };
 		7DFBE6021CCE971E00973EAA /* FyberOffersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE6011CCE971E00973EAA /* FyberOffersTests.m */; };
 		7DFBE60D1CCE971E00973EAA /* FyberOffersUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE60C1CCE971E00973EAA /* FyberOffersUITests.m */; };
+		7DFBE6211CCE9F6500973EAA /* AppTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE61C1CCE9F6500973EAA /* AppTheme.m */; };
+		7DFBE6221CCE9F6500973EAA /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE61E1CCE9F6500973EAA /* UIColor+Theme.m */; };
+		7DFBE6231CCE9F6500973EAA /* UIFont+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE6201CCE9F6500973EAA /* UIFont+Theme.m */; };
+		7DFBE6291CCE9F7A00973EAA /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE6261CCE9F7A00973EAA /* Constants.m */; };
+		7DFBE62A1CCE9F7A00973EAA /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE6281CCE9F7A00973EAA /* Utility.m */; };
+		7DFBE62D1CCEA45900973EAA /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBE62B1CCEA45900973EAA /* iTunesArtwork */; };
+		7DFBE62E1CCEA45900973EAA /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBE62C1CCEA45900973EAA /* iTunesArtwork@2x */; };
+		7DFBE6311CCEA7E700973EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBE6301CCEA7E700973EAA /* Main.storyboard */; };
+		7DFBE6341CCEA98500973EAA /* FormsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE6331CCEA98500973EAA /* FormsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		080CEE9C8E2389BFA8F70AFA /* Pods-FyberOffers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FyberOffers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FyberOffers/Pods-FyberOffers.debug.xcconfig"; sourceTree = "<group>"; };
+		1CA4461EB5055AB73856DA54 /* Pods-FyberOffers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FyberOffers.release.xcconfig"; path = "Pods/Target Support Files/Pods-FyberOffers/Pods-FyberOffers.release.xcconfig"; sourceTree = "<group>"; };
+		7CD9484E1A2149A892AB21FD /* libPods-FyberOffers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FyberOffers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFBE5E41CCE971E00973EAA /* FyberOffers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FyberOffers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFBE5E81CCE971E00973EAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DFBE5EA1CCE971E00973EAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7DFBE5EB1CCE971E00973EAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7DFBE5ED1CCE971E00973EAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7DFBE5EE1CCE971E00973EAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7DFBE5F11CCE971E00973EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DFBE5F31CCE971E00973EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DFBE5F61CCE971E00973EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DFBE5F81CCE971E00973EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +59,21 @@
 		7DFBE6081CCE971E00973EAA /* FyberOffersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FyberOffersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFBE60C1CCE971E00973EAA /* FyberOffersUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FyberOffersUITests.m; sourceTree = "<group>"; };
 		7DFBE60E1CCE971E00973EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DFBE61B1CCE9F6500973EAA /* AppTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTheme.h; sourceTree = "<group>"; };
+		7DFBE61C1CCE9F6500973EAA /* AppTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTheme.m; sourceTree = "<group>"; };
+		7DFBE61D1CCE9F6500973EAA /* UIColor+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Theme.h"; sourceTree = "<group>"; };
+		7DFBE61E1CCE9F6500973EAA /* UIColor+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Theme.m"; sourceTree = "<group>"; };
+		7DFBE61F1CCE9F6500973EAA /* UIFont+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Theme.h"; sourceTree = "<group>"; };
+		7DFBE6201CCE9F6500973EAA /* UIFont+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Theme.m"; sourceTree = "<group>"; };
+		7DFBE6251CCE9F7A00973EAA /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		7DFBE6261CCE9F7A00973EAA /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		7DFBE6271CCE9F7A00973EAA /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		7DFBE6281CCE9F7A00973EAA /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		7DFBE62B1CCEA45900973EAA /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		7DFBE62C1CCEA45900973EAA /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
+		7DFBE6301CCEA7E700973EAA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7DFBE6321CCEA98500973EAA /* FormsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsTableViewController.h; sourceTree = "<group>"; };
+		7DFBE6331CCEA98500973EAA /* FormsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA682B574FBF689A8B9D5DF /* libPods-FyberOffers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11B826572965980B0418783E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CD9484E1A2149A892AB21FD /* libPods-FyberOffers.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7DFBE5DB1CCE971E00973EAA = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +117,8 @@
 				7DFBE6001CCE971E00973EAA /* FyberOffersTests */,
 				7DFBE60B1CCE971E00973EAA /* FyberOffersUITests */,
 				7DFBE5E51CCE971E00973EAA /* Products */,
+				98D7EC0ED402A5A71F70AAEB /* Pods */,
+				11B826572965980B0418783E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +135,16 @@
 		7DFBE5E61CCE971E00973EAA /* FyberOffers */ = {
 			isa = PBXGroup;
 			children = (
+				7DFBE61A1CCE9F6500973EAA /* Theme */,
+				7DFBE6241CCE9F7A00973EAA /* SDK */,
+				7DFBE62F1CCEA77900973EAA /* Application */,
 				7DFBE5EA1CCE971E00973EAA /* AppDelegate.h */,
 				7DFBE5EB1CCE971E00973EAA /* AppDelegate.m */,
-				7DFBE5ED1CCE971E00973EAA /* ViewController.h */,
-				7DFBE5EE1CCE971E00973EAA /* ViewController.m */,
-				7DFBE5F01CCE971E00973EAA /* Main.storyboard */,
 				7DFBE5F31CCE971E00973EAA /* Assets.xcassets */,
 				7DFBE5F51CCE971E00973EAA /* LaunchScreen.storyboard */,
 				7DFBE5F81CCE971E00973EAA /* Info.plist */,
+				7DFBE62B1CCEA45900973EAA /* iTunesArtwork */,
+				7DFBE62C1CCEA45900973EAA /* iTunesArtwork@2x */,
 				7DFBE5E71CCE971E00973EAA /* Supporting Files */,
 			);
 			path = FyberOffers;
@@ -140,6 +176,58 @@
 			path = FyberOffersUITests;
 			sourceTree = "<group>";
 		};
+		7DFBE61A1CCE9F6500973EAA /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				7DFBE61B1CCE9F6500973EAA /* AppTheme.h */,
+				7DFBE61C1CCE9F6500973EAA /* AppTheme.m */,
+				7DFBE61D1CCE9F6500973EAA /* UIColor+Theme.h */,
+				7DFBE61E1CCE9F6500973EAA /* UIColor+Theme.m */,
+				7DFBE61F1CCE9F6500973EAA /* UIFont+Theme.h */,
+				7DFBE6201CCE9F6500973EAA /* UIFont+Theme.m */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		7DFBE6241CCE9F7A00973EAA /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				7DFBE6351CCEAD5400973EAA /* Model */,
+				7DFBE6251CCE9F7A00973EAA /* Constants.h */,
+				7DFBE6261CCE9F7A00973EAA /* Constants.m */,
+				7DFBE6271CCE9F7A00973EAA /* Utility.h */,
+				7DFBE6281CCE9F7A00973EAA /* Utility.m */,
+			);
+			name = SDK;
+			path = Extras;
+			sourceTree = "<group>";
+		};
+		7DFBE62F1CCEA77900973EAA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7DFBE6301CCEA7E700973EAA /* Main.storyboard */,
+				7DFBE6321CCEA98500973EAA /* FormsTableViewController.h */,
+				7DFBE6331CCEA98500973EAA /* FormsTableViewController.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7DFBE6351CCEAD5400973EAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		98D7EC0ED402A5A71F70AAEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				080CEE9C8E2389BFA8F70AFA /* Pods-FyberOffers.debug.xcconfig */,
+				1CA4461EB5055AB73856DA54 /* Pods-FyberOffers.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DFBE6111CCE971E00973EAA /* Build configuration list for PBXNativeTarget "FyberOffers" */;
 			buildPhases = (
+				32FC7104649DE9ACAD04B963 /* 📦 Check Pods Manifest.lock */,
 				7DFBE5E01CCE971E00973EAA /* Sources */,
 				7DFBE5E11CCE971E00973EAA /* Frameworks */,
 				7DFBE5E21CCE971E00973EAA /* Resources */,
+				5578FD4A215B2EE45C5B3758 /* 📦 Embed Pods Frameworks */,
+				D1E23E20524E5FC332FB256D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,8 +335,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DFBE5F71CCE971E00973EAA /* LaunchScreen.storyboard in Resources */,
+				7DFBE6311CCEA7E700973EAA /* Main.storyboard in Resources */,
+				7DFBE62E1CCEA45900973EAA /* iTunesArtwork@2x in Resources */,
 				7DFBE5F41CCE971E00973EAA /* Assets.xcassets in Resources */,
-				7DFBE5F21CCE971E00973EAA /* Main.storyboard in Resources */,
+				7DFBE62D1CCEA45900973EAA /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,13 +358,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32FC7104649DE9ACAD04B963 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5578FD4A215B2EE45C5B3758 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FyberOffers/Pods-FyberOffers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1E23E20524E5FC332FB256D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FyberOffers/Pods-FyberOffers-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7DFBE5E01CCE971E00973EAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DFBE5EF1CCE971E00973EAA /* ViewController.m in Sources */,
+				7DFBE62A1CCE9F7A00973EAA /* Utility.m in Sources */,
+				7DFBE6221CCE9F6500973EAA /* UIColor+Theme.m in Sources */,
+				7DFBE6231CCE9F6500973EAA /* UIFont+Theme.m in Sources */,
+				7DFBE6341CCEA98500973EAA /* FormsTableViewController.m in Sources */,
+				7DFBE6211CCE9F6500973EAA /* AppTheme.m in Sources */,
 				7DFBE5EC1CCE971E00973EAA /* AppDelegate.m in Sources */,
+				7DFBE6291CCE9F7A00973EAA /* Constants.m in Sources */,
 				7DFBE5E91CCE971E00973EAA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,14 +454,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7DFBE5F01CCE971E00973EAA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7DFBE5F11CCE971E00973EAA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7DFBE5F51CCE971E00973EAA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -411,9 +549,11 @@
 		};
 		7DFBE6121CCE971E00973EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 080CEE9C8E2389BFA8F70AFA /* Pods-FyberOffers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FyberOffers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nabeelarif.FyberOffers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,9 +562,11 @@
 		};
 		7DFBE6131CCE971E00973EAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CA4461EB5055AB73856DA54 /* Pods-FyberOffers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FyberOffers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nabeelarif.FyberOffers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +638,7 @@
 				7DFBE6131CCE971E00973EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DFBE6141CCE971E00973EAA /* Build configuration list for PBXNativeTarget "FyberOffersTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +647,7 @@
 				7DFBE6161CCE971E00973EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DFBE6171CCE971E00973EAA /* Build configuration list for PBXNativeTarget "FyberOffersUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +656,7 @@
 				7DFBE6191CCE971E00973EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
