@@ -11,3 +11,4 @@
 NSString *const kUID = @"spiderman";
 NSString *const kAPIKey = @"1c915e3b5d42d05136185030892fbb846c278927";
 NSString *const kAppId = @"2070";
+NSString *const kURLBaseOffers = @"https://api.fyber.com/feed/v1/offers.json";

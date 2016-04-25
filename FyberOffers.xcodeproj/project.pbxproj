@@ -23,6 +23,11 @@
 		7DFBE62E1CCEA45900973EAA /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBE62C1CCEA45900973EAA /* iTunesArtwork@2x */; };
 		7DFBE6311CCEA7E700973EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBE6301CCEA7E700973EAA /* Main.storyboard */; };
 		7DFBE6341CCEA98500973EAA /* FormsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE6331CCEA98500973EAA /* FormsTableViewController.m */; };
+		7DFBE6381CCEAFFB00973EAA /* OfferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE6371CCEAFFB00973EAA /* OfferModel.m */; };
+		7DFBE6401CCEB1E400973EAA /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE63B1CCEB1E400973EAA /* APIClient.m */; };
+		7DFBE6411CCEB1E400973EAA /* BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE63D1CCEB1E400973EAA /* BaseAPI.m */; };
+		7DFBE6421CCEB1E400973EAA /* OffersAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE63F1CCEB1E400973EAA /* OffersAPI.m */; };
+		7DFBE6451CCEB8C200973EAA /* FyberCredentialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE6441CCEB8C200973EAA /* FyberCredentialModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +79,16 @@
 		7DFBE6301CCEA7E700973EAA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7DFBE6321CCEA98500973EAA /* FormsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsTableViewController.h; sourceTree = "<group>"; };
 		7DFBE6331CCEA98500973EAA /* FormsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsTableViewController.m; sourceTree = "<group>"; };
+		7DFBE6361CCEAFFB00973EAA /* OfferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferModel.h; sourceTree = "<group>"; };
+		7DFBE6371CCEAFFB00973EAA /* OfferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferModel.m; sourceTree = "<group>"; };
+		7DFBE63A1CCEB1E400973EAA /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		7DFBE63B1CCEB1E400973EAA /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		7DFBE63C1CCEB1E400973EAA /* BaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAPI.h; sourceTree = "<group>"; };
+		7DFBE63D1CCEB1E400973EAA /* BaseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAPI.m; sourceTree = "<group>"; };
+		7DFBE63E1CCEB1E400973EAA /* OffersAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffersAPI.h; sourceTree = "<group>"; };
+		7DFBE63F1CCEB1E400973EAA /* OffersAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffersAPI.m; sourceTree = "<group>"; };
+		7DFBE6431CCEB8C200973EAA /* FyberCredentialModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FyberCredentialModel.h; sourceTree = "<group>"; };
+		7DFBE6441CCEB8C200973EAA /* FyberCredentialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FyberCredentialModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +150,6 @@
 		7DFBE5E61CCE971E00973EAA /* FyberOffers */ = {
 			isa = PBXGroup;
 			children = (
-				7DFBE61A1CCE9F6500973EAA /* Theme */,
 				7DFBE6241CCE9F7A00973EAA /* SDK */,
 				7DFBE62F1CCEA77900973EAA /* Application */,
 				7DFBE5EA1CCE971E00973EAA /* AppDelegate.h */,
@@ -186,12 +200,14 @@
 				7DFBE61F1CCE9F6500973EAA /* UIFont+Theme.h */,
 				7DFBE6201CCE9F6500973EAA /* UIFont+Theme.m */,
 			);
-			path = Theme;
+			name = Theme;
+			path = ../Theme;
 			sourceTree = "<group>";
 		};
 		7DFBE6241CCE9F7A00973EAA /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				7DFBE6391CCEB17200973EAA /* API */,
 				7DFBE6351CCEAD5400973EAA /* Model */,
 				7DFBE6251CCE9F7A00973EAA /* Constants.h */,
 				7DFBE6261CCE9F7A00973EAA /* Constants.m */,
@@ -205,6 +221,7 @@
 		7DFBE62F1CCEA77900973EAA /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				7DFBE61A1CCE9F6500973EAA /* Theme */,
 				7DFBE6301CCEA7E700973EAA /* Main.storyboard */,
 				7DFBE6321CCEA98500973EAA /* FormsTableViewController.h */,
 				7DFBE6331CCEA98500973EAA /* FormsTableViewController.m */,
@@ -215,8 +232,25 @@
 		7DFBE6351CCEAD5400973EAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7DFBE6361CCEAFFB00973EAA /* OfferModel.h */,
+				7DFBE6371CCEAFFB00973EAA /* OfferModel.m */,
+				7DFBE6431CCEB8C200973EAA /* FyberCredentialModel.h */,
+				7DFBE6441CCEB8C200973EAA /* FyberCredentialModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7DFBE6391CCEB17200973EAA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7DFBE63A1CCEB1E400973EAA /* APIClient.h */,
+				7DFBE63B1CCEB1E400973EAA /* APIClient.m */,
+				7DFBE63C1CCEB1E400973EAA /* BaseAPI.h */,
+				7DFBE63D1CCEB1E400973EAA /* BaseAPI.m */,
+				7DFBE63E1CCEB1E400973EAA /* OffersAPI.h */,
+				7DFBE63F1CCEB1E400973EAA /* OffersAPI.m */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		98D7EC0ED402A5A71F70AAEB /* Pods */ = {
@@ -415,9 +449,14 @@
 				7DFBE6221CCE9F6500973EAA /* UIColor+Theme.m in Sources */,
 				7DFBE6231CCE9F6500973EAA /* UIFont+Theme.m in Sources */,
 				7DFBE6341CCEA98500973EAA /* FormsTableViewController.m in Sources */,
+				7DFBE6411CCEB1E400973EAA /* BaseAPI.m in Sources */,
 				7DFBE6211CCE9F6500973EAA /* AppTheme.m in Sources */,
+				7DFBE6401CCEB1E400973EAA /* APIClient.m in Sources */,
+				7DFBE6381CCEAFFB00973EAA /* OfferModel.m in Sources */,
+				7DFBE6451CCEB8C200973EAA /* FyberCredentialModel.m in Sources */,
 				7DFBE5EC1CCE971E00973EAA /* AppDelegate.m in Sources */,
 				7DFBE6291CCE9F7A00973EAA /* Constants.m in Sources */,
+				7DFBE6421CCEB1E400973EAA /* OffersAPI.m in Sources */,
 				7DFBE5E91CCE971E00973EAA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

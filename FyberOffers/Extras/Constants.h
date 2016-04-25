@@ -11,3 +11,4 @@
 extern NSString *const kUID;
 extern NSString *const kAPIKey;
 extern NSString *const kAppId;
+extern NSString *const kURLBaseOffers;

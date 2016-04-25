@@ -5,4 +5,5 @@ target 'FyberOffers' do
     pod 'SDWebImage', '~>3.7'
     pod 'CCBottomRefreshControl', '~>0.5.1'
     pod 'MBProgressHUD', '~> 0.9.2'
+    pod 'TWMessageBarManager'
 end

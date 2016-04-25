@@ -1,6 +1,6 @@
 //
 //  MicroGitTheme.h
-//  Micro Git
+//  FyberOffers
 //
 //  Created by Nabeel Arif on 2/14/16.
 //  Copyright © 2016 Nabeel. All rights reserved.
