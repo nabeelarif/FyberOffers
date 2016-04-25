@@ -11,6 +11,12 @@
 #import "OfferModel.h"
 #import "APIClient.h"
 
+@interface OfferCell : UITableViewCell
+
+@end
+@implementation OfferCell
+
+@end
 
 @interface OffersTableViewController ()
 @property (nonatomic, strong) NSMutableArray<OfferModel*> *arrayOffers;
@@ -22,6 +28,8 @@
     [super viewDidLoad];
     
     self.arrayOffers = [NSMutableArray<OfferModel*> new];
+    [self loadMoreData];
+    [self addBottomRefreshControl:YES];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -64,15 +72,12 @@
     return self.arrayOffers.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    OfferCell *cell = (OfferCell*)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

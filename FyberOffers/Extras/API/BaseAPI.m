@@ -27,11 +27,15 @@
             [self handleError:response error:error];
             block(NO,nil);
         } else {
-            
-            NSArray *offersArray = responseObject[@"offers"];
-            if (offersArray.count>0) {
-                _prevPage = _nextPage;
-                _nextPage = _nextPage+1;
+            NSArray *offersArray;
+            if ([responseObject[@"code"] isEqualToString:@"NO_CONTENT"]) {
+                [BaseAPI showNoDataErrorToast];
+            }else{
+                offersArray = responseObject[@"offers"];
+                if (offersArray.count>0) {
+                    _prevPage = _nextPage;
+                    _nextPage = _nextPage+1;
+                }
             }
             id result = nil;
             if (offersArray && [self respondsToSelector:@selector(parseResponse:)]) {
@@ -46,12 +50,16 @@
 {
     [[TWMessageBarManager sharedInstance] showMessageWithTitle:NSLocalizedString(@"Network Error", @"Network error Title") description:NSLocalizedString(@"Internet connection appears to be offline.", @"Network Error message") type:TWMessageBarMessageTypeError];
 }
++(void)showNoDataErrorToast
+{
+    [[TWMessageBarManager sharedInstance] showMessageWithTitle:NSLocalizedString(@"No Data", @"Message bar Title") description:NSLocalizedString(@"No offers are currently available for this user.", @"Message bar description") type:TWMessageBarMessageTypeError];
+}
 -(id)parseResponse:(id)responseObject{
     //should be implemented in child class
     return nil;
 }
 -(void)resetValues{
     _prevPage = -1;
-    _nextPage = 0;
+    _nextPage = 1;
 }
 @end
