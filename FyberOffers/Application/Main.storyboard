@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Settings-->
@@ -133,18 +134,65 @@
         <scene sceneID="J3b-3B-Mh1">
             <objects>
                 <tableViewController id="UoB-oj-aeo" customClass="OffersTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" id="1I0-8j-mKR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" id="1I0-8j-mKR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="69" id="Unn-QQ-nH1" customClass="OfferCell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="69"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="83" id="Unn-QQ-nH1" customClass="OfferCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="83"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Unn-QQ-nH1" id="VVn-sD-DdC">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="68.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="82.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZWY-qD-L8k">
+                                            <rect key="frame" x="0.0" y="0.0" width="68" height="68.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="ZWY-qD-L8k" secondAttribute="height" multiplier="1:1" id="25p-CW-xT8"/>
+                                                <constraint firstAttribute="height" constant="68" id="rGj-Gx-Ibl"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sd-LY-MH6">
+                                            <rect key="frame" x="76" y="8" width="516" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SD3-4d-Up9">
+                                            <rect key="frame" x="76" y="30.5" width="516" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVv-KC-CHd">
+                                            <rect key="frame" x="76" y="48.5" width="516" height="23.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SD3-4d-Up9" firstAttribute="top" secondItem="7Sd-LY-MH6" secondAttribute="bottom" constant="2" id="0Vb-ql-mhp"/>
+                                        <constraint firstItem="ZWY-qD-L8k" firstAttribute="top" secondItem="VVn-sD-DdC" secondAttribute="top" id="3jj-gl-s8K"/>
+                                        <constraint firstItem="cVv-KC-CHd" firstAttribute="top" secondItem="SD3-4d-Up9" secondAttribute="bottom" id="4mR-wO-Bpl"/>
+                                        <constraint firstAttribute="bottom" secondItem="cVv-KC-CHd" secondAttribute="bottom" priority="750" constant="10.5" id="BQa-HD-8NH"/>
+                                        <constraint firstItem="7Sd-LY-MH6" firstAttribute="leading" secondItem="ZWY-qD-L8k" secondAttribute="trailing" constant="8" id="GJ9-Kq-jK6"/>
+                                        <constraint firstItem="SD3-4d-Up9" firstAttribute="leading" secondItem="ZWY-qD-L8k" secondAttribute="trailing" constant="8" id="I0O-se-Dow"/>
+                                        <constraint firstItem="7Sd-LY-MH6" firstAttribute="top" secondItem="VVn-sD-DdC" secondAttribute="top" constant="8" id="KiM-zd-y15"/>
+                                        <constraint firstAttribute="trailing" secondItem="SD3-4d-Up9" secondAttribute="trailing" constant="8" id="XmS-dE-onv"/>
+                                        <constraint firstAttribute="trailing" secondItem="cVv-KC-CHd" secondAttribute="trailing" constant="8" id="kc2-Qo-Gaj"/>
+                                        <constraint firstItem="cVv-KC-CHd" firstAttribute="leading" secondItem="ZWY-qD-L8k" secondAttribute="trailing" constant="8" id="oXP-Ld-elw"/>
+                                        <constraint firstAttribute="trailing" secondItem="7Sd-LY-MH6" secondAttribute="trailing" constant="8" id="qTI-Ed-0fr"/>
+                                        <constraint firstItem="ZWY-qD-L8k" firstAttribute="leading" secondItem="VVn-sD-DdC" secondAttribute="leading" id="uBC-yE-I65"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ivThumbnail" destination="ZWY-qD-L8k" id="D6Z-25-ATC"/>
+                                    <outlet property="lblPayout" destination="cVv-KC-CHd" id="7F1-wM-4rj"/>
+                                    <outlet property="lblTeaser" destination="SD3-4d-Up9" id="hJp-ja-q9N"/>
+                                    <outlet property="lblTitle" destination="7Sd-LY-MH6" id="A6D-I9-iNC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

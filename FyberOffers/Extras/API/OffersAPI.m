@@ -37,7 +37,7 @@
     return array;
 }
 -(void)setCredential:(FyberCredentialModel *)credential{
-    if ([credential isEqual:credential]==NO) {
+    if (credential==nil || [self.credential isEqual:credential]==NO) {
         [self resetValues];
     }
     _credential = credential;
@@ -53,12 +53,14 @@
     
     [params setObject:_credential.uid forKey:@"uid"];
     [params setObject:_credential.appId forKey:@"appid"];
-    [params setObject:[Utility getIPAddress] forKey:@"ip"];
+    [params setObject:@"112" forKey:@"offer_types"];
+//    [params setObject:[Utility getIPAddress] forKey:@"ip"];
+    [params setObject:@"109.235.143.113" forKey:@"ip"];
     //NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
     [params setObject:@"de" forKey:@"locale"];
     [params setObject:[[[[UIDevice currentDevice] identifierForVendor] UUIDString] lowercaseString] forKey:@"device_id"];
     [params setObject:@"campaign2" forKey:@"pub0"];
-    [params setObject:[NSString stringWithFormat:@"%ld",self.nextPage] forKey:@"page"];
+    [params setObject:[NSString stringWithFormat:@"%ld",(long)self.nextPage] forKey:@"page"];
     [params setObject:[NSString stringWithFormat:@"%ld",(long)[[NSDate date] timeIntervalSince1970]] forKey:@"timestamp"];
     //NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
     [params setObject:@"9.3" forKey:@"os_version"];

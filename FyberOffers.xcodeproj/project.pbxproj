@@ -29,6 +29,7 @@
 		7DFBE6421CCEB1E400973EAA /* OffersAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE63F1CCEB1E400973EAA /* OffersAPI.m */; };
 		7DFBE6451CCEB8C200973EAA /* FyberCredentialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE6441CCEB8C200973EAA /* FyberCredentialModel.m */; };
 		7DFBE6481CCEC0C800973EAA /* OffersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE6471CCEC0C800973EAA /* OffersTableViewController.m */; };
+		7DFEB2001CCF7F2E00FC0985 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFEB1FF1CCF7F2E00FC0985 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		7DFBE6441CCEB8C200973EAA /* FyberCredentialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FyberCredentialModel.m; sourceTree = "<group>"; };
 		7DFBE6461CCEC0C800973EAA /* OffersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffersTableViewController.h; sourceTree = "<group>"; };
 		7DFBE6471CCEC0C800973EAA /* OffersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffersTableViewController.m; sourceTree = "<group>"; };
+		7DFEB1FF1CCF7F2E00FC0985 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DFEB2001CCF7F2E00FC0985 /* AdSupport.framework in Frameworks */,
 				3DA682B574FBF689A8B9D5DF /* libPods-FyberOffers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +126,7 @@
 		11B826572965980B0418783E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DFEB1FF1CCF7F2E00FC0985 /* AdSupport.framework */,
 				7CD9484E1A2149A892AB21FD /* libPods-FyberOffers.a */,
 			);
 			name = Frameworks;

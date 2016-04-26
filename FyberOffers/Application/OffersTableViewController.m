@@ -10,8 +10,16 @@
 #import <CCBottomRefreshControl/UIScrollView+BottomRefreshControl.h>
 #import "OfferModel.h"
 #import "APIClient.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <TWMessageBarManager/TWMessageBarManager.h>
+#import "UIColor+Theme.h"
+
 
 @interface OfferCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+@property (weak, nonatomic) IBOutlet UILabel *lblTeaser;
+@property (weak, nonatomic) IBOutlet UILabel *lblPayout;
+@property (weak, nonatomic) IBOutlet UIImageView *ivThumbnail;
 
 @end
 @implementation OfferCell
@@ -20,6 +28,7 @@
 
 @interface OffersTableViewController ()
 @property (nonatomic, strong) NSMutableArray<OfferModel*> *arrayOffers;
+@property (nonatomic, strong) NSMutableSet<NSNumber*> *setDuplicateTracker;
 @end
 
 @implementation OffersTableViewController
@@ -28,13 +37,14 @@
     [super viewDidLoad];
     
     self.arrayOffers = [NSMutableArray<OfferModel*> new];
+    self.setDuplicateTracker = [NSMutableSet<NSNumber*> new];
     [self loadMoreData];
-    [self addBottomRefreshControl:YES];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self addBottomRefreshControl:YES];
 }
 -(void)addBottomRefreshControl:(BOOL)add{
     if(add && self.tableView.bottomRefreshControl == nil){
@@ -42,6 +52,7 @@
         UIRefreshControl *refreshControl = [UIRefreshControl new];
         refreshControl.triggerVerticalOffset = 100.;
         [refreshControl addTarget:self action:@selector(loadMoreData) forControlEvents:UIControlEventValueChanged];
+        [refreshControl setTintColor:[UIColor appColorWithLightness:0.3]];
         self.tableView.bottomRefreshControl = refreshControl;
     }else if(!add && self.tableView.bottomRefreshControl){
         self.tableView.bottomRefreshControl = nil;
@@ -51,9 +62,22 @@
     [APIClientKit loadNextPageOffersForCredentials:self.currentCredential apiBlock:^(BOOL success, NSArray *data) {
         
         if (success && data && [data isKindOfClass:[NSArray class]]) {
-            [self.arrayOffers addObjectsFromArray:(NSArray<OfferModel*> *)data];
+            NSMutableArray<OfferModel*> * models = [NSMutableArray<OfferModel*> new];
+            for (OfferModel *model in data) {
+                if ([self.setDuplicateTracker containsObject:[NSNumber numberWithInteger:model.offer_id]]==NO) {
+                    [self.setDuplicateTracker addObject:[NSNumber numberWithInteger:model.offer_id]];
+                    [models addObject:model];
+                }else{
+                    NSLog(@"Already Exists");
+                }
+            }
+            [self.arrayOffers addObjectsFromArray:models];
             [self.tableView reloadData];
+        }else if(success && data.count==0){
+            
+            [[TWMessageBarManager sharedInstance] showMessageWithTitle:NSLocalizedString(@"No More Offers", @"Warning Title") description:NSLocalizedString(@"There is no more offers available at the moment.", @"Warning description") type:TWMessageBarMessageTypeInfo];
         }
+        [self.tableView.bottomRefreshControl endRefreshing];
     }];
 }
 
@@ -74,53 +98,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     OfferCell *cell = (OfferCell*)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
-    
+    OfferModel *model = [self.arrayOffers objectAtIndex:indexPath.row];
+    cell.lblTitle.text = model.title;
+    cell.lblTeaser.text = model.teaser;
+    cell.lblPayout.text = [NSString stringWithFormat:@"Payout: %ld",model.payout];
+    [cell.ivThumbnail sd_setImageWithURL:[NSURL URLWithString:model.thumbnailHires] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        if (!image) {
+            NSLog(@"Failed to find image: %@",imageURL);
+        }
+    }];
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewAutomaticDimension;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

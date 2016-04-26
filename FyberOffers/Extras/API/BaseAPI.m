@@ -16,6 +16,8 @@
 {
     if (error.code==-1009 && !response) {
         [[self class] showNeteworkErrorToast];
+    }else{
+        [BaseAPI showGeneralErrorToast];
     }
 }
 -(void)loadPaginatedDataForRequest:(NSURLRequest *)request apiBlock:(APIBlock)block
@@ -53,6 +55,10 @@
 +(void)showNoDataErrorToast
 {
     [[TWMessageBarManager sharedInstance] showMessageWithTitle:NSLocalizedString(@"No Data", @"Message bar Title") description:NSLocalizedString(@"No offers are currently available for this user.", @"Message bar description") type:TWMessageBarMessageTypeError];
+}
++(void)showGeneralErrorToast
+{
+    [[TWMessageBarManager sharedInstance] showMessageWithTitle:NSLocalizedString(@"Error", @"Message bar Title") description:NSLocalizedString(@"An error occurred please try again latter.", @"Message bar description") type:TWMessageBarMessageTypeError];
 }
 -(id)parseResponse:(id)responseObject{
     //should be implemented in child class
