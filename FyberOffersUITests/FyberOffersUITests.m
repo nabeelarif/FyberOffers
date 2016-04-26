@@ -32,9 +32,27 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testUIElements {
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationFaceUp;
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationFaceUp;
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElementQuery *tablesQuery = app.tables;
+    XCUIElement *tfUID = [[tablesQuery.cells containingType:XCUIElementTypeStaticText identifier:@"UID"] childrenMatchingType:XCUIElementTypeTextField].element;
+    XCUIElement *tfAPIKey = [[tablesQuery.cells containingType:XCUIElementTypeStaticText identifier:@"API Key"] childrenMatchingType:XCUIElementTypeTextField].element;
+    XCUIElement *tfAppID = [[tablesQuery.cells containingType:XCUIElementTypeStaticText identifier:@"App Id"] childrenMatchingType:XCUIElementTypeTextField].element;
+    
+    XCUIElement *settingsNavigationBar = app.navigationBars[@"Settings"];
+    XCUIElement *btnSearch = settingsNavigationBar.buttons[@"Search"];
+    
+    
+    XCTAssertTrue(tfUID.exists);
+    XCTAssertTrue(tfAPIKey.exists);
+    XCTAssertTrue(tfAppID.exists);
+    XCTAssertTrue(settingsNavigationBar.exists);
+    XCTAssertTrue(btnSearch.exists);
+    
 }
 
 @end
