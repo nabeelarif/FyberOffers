@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  To communicate with Fyber api we need some credentials including uid,
+ *  apiKey, appId. All these info is grouped together into a single model
+ *  object named FyberCredentialModel.
+ */
 @interface FyberCredentialModel : NSObject
 @property (nonatomic, strong) NSString *uid;
 @property (nonatomic, strong) NSString *apiKey;

@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  A UIFont category for Our application's theme. It can contain
+ *  Utility mehtods for UIFont or most commonly used fonts within
+ *  our app.
+ */
 @interface UIFont (Theme)
 + (UIFont *)labelFont;
 + (UIFont *)labelFontOfSize:(CGFloat)size;
-+ (UIFont *)gitFont;
-+ (UIFont *)gitFontOfSize:(CGFloat)size;
 @end

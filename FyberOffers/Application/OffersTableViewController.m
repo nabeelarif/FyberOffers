@@ -46,6 +46,11 @@
     [super viewDidAppear:animated];
     [self addBottomRefreshControl:YES];
 }
+/**
+ *  Adds a refresh control at the bottom of tableView
+ *
+ *  @param add Yes to add and NO to remove
+ */
 -(void)addBottomRefreshControl:(BOOL)add{
     if(add && self.tableView.bottomRefreshControl == nil){
         
@@ -58,6 +63,9 @@
         self.tableView.bottomRefreshControl = nil;
     }
 }
+/**
+ *  Loads more data from Offers Api and communicating with APIClient.
+ */
 -(void)loadMoreData{
     [APIClientKit loadNextPageOffersForCredentials:self.currentCredential apiBlock:^(BOOL success, NSArray *data) {
         

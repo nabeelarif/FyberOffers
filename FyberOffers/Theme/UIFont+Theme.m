@@ -20,11 +20,4 @@
 {
     return [UIFont systemFontOfSize:size];
 }
-+ (UIFont *)gitFont{
-    return [self gitFontOfSize:kGitFont];
-}
-+ (UIFont *)gitFontOfSize:(CGFloat)size;
-{
-    return[UIFont fontWithName:@"octicons" size:size];
-}
 @end
